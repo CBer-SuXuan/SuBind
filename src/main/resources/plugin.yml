@@ -1,0 +1,9 @@
+name: SuBind
+version: '1.0'
+main: me.suxuan.bind.SuBind
+api-version: '1.21'
+depend: [ Vault ]
+commands:
+  subind:
+    aliases: [ bind ]
+    description: SuBind 主命令

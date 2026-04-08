@@ -1,0 +1,86 @@
+# SuBind 配置文件
+
+drop-interval: 3  # 3秒内连按两次Q才能丢弃
+
+# 绑定花费配置
+bind-settings:
+  # 默认花费
+  default-cost:
+    money: 1000
+    item:
+      material: "NETHERITE_SCRAP"
+      amount: 1
+      custom-model-data: 0 # 0 表示不检查 CMD
+      name: "<yellow>绑定石头" # 仅显示在绑定菜单中
+
+  # 特定物品的绑定花费
+  # 格式: 材质名:CMD (CMD为0表示任意该材质物品)
+  custom-costs:
+    GOLDEN_SWORD:10001:
+      money: 5000
+      item:
+        material: "NETHERITE_INGOT"
+        amount: 2
+        custom-model-data: 0
+        name: "<yellow>绑定下界合金"
+    NETHERITE_AXE:0:
+      money: 2000
+      item:
+        material: "DIAMOND"
+        amount: 5
+        custom-model-data: 0
+        name: "<yellow>绑定钻石"
+
+# 解绑花费配置
+unbind-settings:
+  # 默认解绑花费
+  default-cost:
+    money: 500
+    item:
+      material: "IRON_INGOT"
+      amount: 5
+      custom-model-data: 0
+      name: "<yellow>解绑铁锭"
+
+  # 特定物品的解绑花费 (同样支持 CMD)
+  custom-costs:
+    DIAMOND_SWORD:10001:
+      money: 10000
+      item:
+        material: "NETHERITE_INGOT"
+        amount: 1
+        custom-model-data: 0
+        name: "<yellow>解绑下界合金"
+
+# 当某个物品绑定到了某个玩家，会在物品的lore中添加以下内容
+bind-lore: "<gray>已绑定于玩家 {player}"
+
+# 如果使用了占位符，并且占位符对应的内容不存在，会使用以下定义的默认值
+# 当前为测试内容
+placeholder:
+  item_name: 不需要物品
+  item_amount: 无
+
+# 如果用到插件内置邮件功能，以下配置不生效
+mail:
+  from: "<aqua>[!] <white>系统邮件："
+  icon: "BOOK"
+  title: "<yellow>绑定物品自动返还"
+  content:
+    - "<gray>你好，{player}！"
+    - "<gray>由于离开太久了，绑定物品通过邮件返还给你了。"
+
+# 自动返还设置
+return-settings:
+  # 自动返还时间 (分钟)
+  delay: 1
+
+# 自动绑定设置
+auto-bind-settings:
+  # 启用自动绑定的世界列表
+  enabled-worlds:
+    - "world_resource"
+  # 自动绑定时是否发送提示消息
+  send-message: true
+  # 是否忽略已经被绑定的物品（防止捡起别人的丢弃物也被强制改绑，建议设为 true）
+  ignore-already-bound: true

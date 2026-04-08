@@ -1,0 +1,57 @@
+# GUI 界面配置
+bind-menu:
+  title: "<gradient:gold:yellow>物品绑定界面</gradient>"
+  rows: 3
+  # 填充背景的物品
+  filler:
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+    lore: [ ]
+    custom-model-data: 0
+
+  # 特殊功能槽位定义
+  slots:
+    input: 13 # 放入物品的槽位
+    confirm: 22 # 确认按钮
+
+  # 装饰物品 (可以定义多个)
+  decorations:
+    info:
+      slot: 10
+      material: "BOOK"
+      name: "<yellow>绑定说明"
+      lore:
+        - "<gray>1. 将物品放入中间槽位"
+        - "<gray>2. 查看下方确认按钮的消耗"
+        - "<gray>3. 点击确认完成绑定"
+        - ""
+        - "<gray>如果放入已经绑定的物品，则进行解绑操作"
+      custom-model-data: 0
+
+  # 按钮状态定义
+  buttons:
+    no-item:
+      material: "BARRIER"
+      name: "<red>请放入物品"
+      lore:
+        - "<gray>当前没有任何物品待绑定"
+    confirm:
+      material: "ANVIL"
+      name: "<green>确认绑定"
+      lore:
+        - "<gray>绑定将消耗:"
+        - "<white>- 金币: <gold>{cost}"
+        - "<white>- 物品: <yellow>{item_name} × {item_amount}"
+    confirm-unbind:
+      material: "LAVA_BUCKET"
+      name: "<red>确认解绑"
+      lore:
+        - "<gray>该物品当前绑定于你"
+        - "<white>- 金币: <gold>{cost}"
+        - "<white>- 物品: <yellow>{item_name} × {item_amount}"
+        - "<yellow>点击将清除绑定信息！"
+    not-your-item:
+      material: "BARRIER"
+      name: "<red>无法操作"
+      lore:
+        - "<gray>该物品不属于你，无法解绑"

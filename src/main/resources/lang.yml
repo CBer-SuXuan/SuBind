@@ -1,0 +1,28 @@
+# SuBind 语言配置文件
+# 支持MiniMessage
+system:
+  reload-success: "<green>配置已重载！"
+  no-permission: "<red>你没有权限执行此操作。"
+  only-player: "<red>该命令只能由玩家执行。"
+
+bind:
+  success: "<green>绑定成功！"
+  insufficient-funds: "<green>绑定失败！你需要 <yellow>{price} <red>金币。"
+  insufficient-items: "<green>绑定失败！你缺少必要的绑定材料。"
+  unbind-success: "<green>解绑成功！"
+  not-your-item: "<red>该物品不属于你，无法解绑。"
+  auto-bound-world: "<aqua>由于你在特殊区域，拾取的 <white>{item} <aqua>已自动绑定。"
+
+security:
+  drop-first-attempt: "<yellow>这是绑定物品，请在 <aqua>{time}秒 <yellow>内再次按 <aqua>Q <yellow>确认丢弃！"
+  drop-confirmed: "<gray>绑定物品已被强行丢弃。"
+
+return:
+  pickup-bind: "<red>你拾取了绑定物品</red>{item}<red>，将在<aqua>{delay}分钟</aqua>后自动返还给{player}！"
+  received-auto: "<aqua>[!] <white>绑定物品</white>{item}<white>已经自动返还到你的背包。"
+  removed-auto: "<red>[!] <white>绑定物品</white>{item}<white>已还给原主人{player}。"
+
+mail:
+  notify: "<aqua>[!] <white>你有绑定物品没有领取，输入 /bind claim 领取。"
+  no-items: "<red>你没有任何待领取的绑定邮件物品。"
+  claim-success: "<green>你已成功领取绑定物品。"
