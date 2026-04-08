@@ -17,7 +17,7 @@
 如果您希望直接获取**已编译好的开箱即用版本 (.jar)**，并获得后续的**永久更新**与**一对一技术支持**，请前往我的 MineBBS
 发布页进行购买支持。您的赞助是我持续开发和维护的最大动力！
 
-👉 **[点击这里前往 MineBBS 购买 SuBind 成品](这里替换为你的MineBBS帖子链接)** 👈
+👉 **[点击这里前往 MineBBS 购买 SuBind 成品](https://www.minebbs.com/resources/subind.16024/)** 👈
 
 ---
 
