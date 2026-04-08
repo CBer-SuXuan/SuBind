@@ -2,3 +2,5 @@
 build.xml
 /server
 *.iml
+/target
+dependency-reduced-pom.xml
